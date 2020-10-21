@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+   
+     <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+    <script>
+        setInterval(
+        function () {
+          var randomColor = Math.floor(Math.random()*16777215).toString(16);
+          document.body.style.backgroundColor = "#"+randomColor;
+        },1000);
+        </script>
+   <div class="mainDiv">
+       <nav>
+            <ul>
+                <li class="main_header_item_list">
+                    <a href="/">Student</a>
+                </li>
+                
+                <li class="main_header_item_list">
+                    <a href="/admin/add-teacher" class="active">Teacher</a>
+                </li>
+            </ul>
+       </nav>
+   </div>
+   <h1>Wecome </h1>
+   <br/><br/>
+   
+   
+  <div >
+      <ul>
+          <h1> <li>Name:<%=prod[0].name%></li></h1>
+          <h1><li>Start Time: <%=prod[0].startTime%></li></h1>
+          <h1><li>End Time: <%=prod[0].endTime%></li></h1>
+          <h1><li>Topic Name: <%=prod[0].topic%></li></h1>
+          <h1><li>Subject: <%=prod[0].subject%></li></h1>
+          <h1><li>Date: <%=prod[0].DOB%></li></h1>
+      </ul>
+      </div>
+</body>
+</html> 

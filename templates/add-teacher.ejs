@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+  
+          <link rel="stylesheet" href="/css/main.css"/>
+        
+</head>
+<body>
+    <script>
+        setInterval(
+        function () {
+          var randomColor = Math.floor(Math.random()*16777215).toString(16);
+          document.body.style.backgroundColor = "#"+randomColor;
+        },1000);
+        </script>
+    <div class="mainDiv">
+        <nav>
+             <ul>
+                 <li class="main_header_item_list">
+                     <a href="/">Student</a>
+                 </li>
+                 
+                 <li class="main_header_item_list">
+                    <a href="/admin/register" class="active">Teacher</a>
+                </li>
+             </ul>
+        </nav>
+    </div>
+    <h1>Hello there !!</h1>
+    <h3>Add new test details </h3>
+    <br/><br/>
+    <form action="/admin/add-teacher" method="POST">
+        Test Name: <input   class="textbox" type="text" name="name"/> <br>
+        Start Time: <input type="time" id="appt" name="startTime"
+       min="09:00" max="18:00" required>
+       
+       End Time: <input type="time" id="appt" name="endTime"
+       min="09:00" max="18:00" required>
+       <br/>
+        
+        Topic Name:<input class="textbox" type="text" name="topic"/><br>
+        <select name = "subject">
+               <option value = "Subject" selected>Subject</option>
+               <option value = "Subject1">Subject1</option>
+               <option value = "Subject2">Subject2</option>
+               <option value = "Subject3">Subject3</option>
+               <option value = "Subject4">Subject4</option>
+               <option value = "Subject5">Subject5</option>
+               <option value = "Subject6">Subject6</option>
+            </select>
+            <label for="DOB">Date of test:</label>
+     <input type="date" id="DOB" name="DOB">
+     
+     <button class="button" type="submit">Add</button>
+    </form>
+    
+</body>
+</html>

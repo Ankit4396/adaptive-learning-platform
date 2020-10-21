@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+    <script>
+        setInterval(
+        function () {
+          var randomColor = Math.floor(Math.random()*16777215).toString(16);
+          document.body.style.backgroundColor = "#"+randomColor;
+        },1000);
+        </script>
+   <div class="mainDiv">
+       <nav>
+            <ul>
+                <li class="main_header_item_list">
+                    <a href="/">Student</a>
+                </li>
+                <li class="main_header_item_list">
+                    <a href="/admin/register" class="active">Teacher</a>
+                </li>
+            </ul>
+       </nav>
+   </div>
+   <h1>Welcome </h1>
+   <h4 style="color: blue;">List of tests</h4>
+   <br/><br/>
+   <% if(prod.length>0){%>
+   
+  <div>
+   <% for(products of prod){%>
+    <div>
+        <ul>
+       <li> <h2>Name: <%= products.name%>  <h3>Start Time: <%= products.startTime %></h3> <h3>End Time: <%= products.endTime %></h3> </h2></li>
+        <li> <a href="/products/<%=products.id%>">View Details</a></li>
+       </ul>
+    </div>
+    
+   <% }  %>
+  </div>
+  <% }else{ %>
+ <h2> No Test found!</h2>
+   <% }%>
+</body>
+</html> 
