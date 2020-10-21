@@ -1,0 +1,7 @@
+GET http:localhost:7005/users
+
+POST http:localhost:7005/users
+Content-Type: application/json
+{
+    "name":""
+}
