@@ -1,3 +1,4 @@
+var PORT = process.env.PORT|| 7005
 const express=require("express");
 const bodyParser = require("body-parser");
 const {check,validationResult}=require("express-validator"); 
@@ -48,5 +49,5 @@ res.render("404");
 });
 
 
-app.listen(7005);
+app.listen(PORT);
 
